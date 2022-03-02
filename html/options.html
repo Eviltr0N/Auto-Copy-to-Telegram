@@ -1,0 +1,263 @@
+<html>
+
+<head>
+    <title>Auto Copy to Telegram: Options</title>
+
+    <script type="text/javascript" src="/js/options.js"></script>
+
+    <link rel="stylesheet" href="/css/options.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img id="logo" src="/assets/autoCopy-128.png" width="64" height="64" alt="logo">
+            <span>Auto Copy to Telegram</span>
+        </div>
+    </header>
+    <main>
+        <div class="savedSettings">
+            Any open tabs will need to be reloaded in order for changes to take effect.
+        </div>
+
+        <div class="tabGroup">
+            <input type="radio" name="tabGroup1" id="rad1" class="tab1" checked="checked">
+            <label for="rad1">Settings</label>
+            <input type="radio" name="tabGroup1" id="rad2" class="tab2">
+            <label for="rad2">Blocklist</label>
+            <input type="radio" name="tabGroup1" id="rad3" class="tab3">
+            <label for="rad3">Donate</label>
+            <input type="radio" name="tabGroup1" id="rad4" class="tab4">
+            <label for="rad4">About</label>
+
+            <br>
+            <!----    ------------------------------------------------------------------>
+            <div class="tab tab1">
+                <input class="autosave" type="checkbox" id="aoc"> <label for="aoc">Enable Telegram</label>
+                <div id="aocSettings" class="indent">
+                    <div>
+                        <span class="label">Bot-Token: <input class="autosave"  type="text" id = "aocd"></span>
+
+                        <span id="bigger"></span>
+                        <span id="smaller"></span>
+                        <div id="aocs"></div>
+                        <span class="note"></span>
+                    </div>
+
+                    <div>
+                        <span class="label">Chat-Id: </span>
+                        <input class="autosave" type="text" id="ChatId"> <span class="note">(If there is any "-" (hyphen or minus) sign in your Chat Id, Don't Remove it.)</span>
+                    </div>
+
+                    <div class="aocLocation">
+                        <span class="label">--- Click<a target="_blank" href="https://github.com/Eviltr0N/Auto-Copy-to-Telegram#how-to-create-telegram-bot"> Here</a> to know how to get Chat Id & Bot api token ---</span>
+                        <input class="autosave" type="hidden" id="aocltl" name="aocLocation" value="topLeft"><label for="aocltl"></label>
+                        <input class="autosave" type="hidden" id="aocltr" name="aocLocation" value="topRight"><label for="aocltr"></label>
+                        <input class="autosave" type="hidden" id="aoclbl" name="aocLocation" value="bottomLeft"><label for="aoclbl"></label>
+                        <input class="autosave" type="hidden" id="aoclbr" name="aocLocation" value="bottomRight" checked><label for="aoclbr"></label>
+                    </div>
+                </div>
+                <br>
+                <input class="autosave" type="checkbox" id="nativeAlertOnCopy" name="nativeAlertOnCopy"> <label for="nativeAlertOnCopy">Alert on copy &ndash; native system notification (may not work)</label>
+                <div id="nativeAlertOnCopySettings" class="indent">
+                    <input class="autosave" type="checkbox" id="nativeAlertOnCopySound" name="nativeAlertOnCopySound"> <label for="nativeAlertOnCopySound">Play sound <span class="note">(Note: may not work on all operating systems)</span></label>
+                </div>
+                <br>
+                <input class="autosave" type="checkbox" id="rsoc"> <label for="rsoc">Remove selection on copy</label>
+                <br>
+                <input class="autosave" type="checkbox" id="eitb"> <label for="eitb">Enable in text boxes</label>
+                <br>
+                <input class="autosave" type="checkbox" id="eice"> <label for="eice">Enable in content editable elements</label>
+                <br>
+                <input class="autosave" type="checkbox" id="pomc"> <label for="pomc">Paste on middle click</label>
+                <br>
+                <input class="autosave" type="checkbox" id="dc"> <label for="dc">
+                  Press <select class="select-css modifierKey autosave" id="dck">
+                    <option id="ctrl" value="ctrl">CTRL</option>
+                    <option id="shift" value="shift">Shift</option>
+                    <option id="alt" value="alt">ALT</option>
+                    <option id="ctrlalt" value="ctrlalt">CTRL-ALT</option>
+                    <option id="ctrlshift" value="ctrlshift">CTRL-Shift</option>
+                    <option id="ctrlaltshift" value="ctrlaltshift">CTRL-ALT-Shift</option>
+                    <option id="altshift" value="altshift">ALT-Shift</option>
+                  </select>
+                  key while selecting to <select class="select-css autosave" id="acs">
+                    <option value="enable">enable</option>
+                    <option value="disable">disable</option>
+                  </select>Auto Copy to Telegram
+          </label>
+                <br>
+                <input class="autosave" type="checkbox" id="acal"> <label for="acal">
+            Press <select class="select-css modifierKey autosave" id="acalo">
+                    <option id="ctrl" value="ctrl">CTRL</option>
+                    <option id="shift" value="shift">Shift</option>
+                    <option id="alt" value="alt">ALT</option>
+                    <option id="ctrlalt" value="ctrlalt">CTRL-ALT</option>
+                    <option id="ctrlshift" value="ctrlshift">CTRL-Shift</option>
+                    <option id="ctrlaltshift" value="ctrlaltshift">CTRL-ALT-Shift</option>
+                    <option id="altshift" value="altshift">ALT-Shift</option>
+                  </select> to copy as HTML link</label>
+                <br>
+                <input class="autosave" type="checkbox" id="cal"> <label for="cal">Always copy as HTML link <span class="note">(Note: Copy wihtout formatting and Include an information comment cannot be used with Copy as HTML Link and visa versa)</label>
+                <br>
+                <input class="autosave" type="checkbox" id="capt"> <label for="capt">Copy without formatting</label>
+                <br>
+                <input class="autosave" type="checkbox" name="trimWhitespace" id="trimWhitespace"> <label for="trimWhitespace">Remove whitespace from the begining and ending of selection <span class="note">(Note: this option will remove formatting)</span></label>
+                <br>
+                <input class="autosave" type="checkbox" id="iurl"> <label for="iurl">Include an informational comment</label>
+                <div id="diviurlap" class="indent">
+                    <input class="autosave" type="checkbox" name="iurlemod" id="iurlemod"> <label for="iurlemod">
+              Press <select class="select-css modifierKey autosave" id="iurlmod">
+                <option id="ctrl" value="ctrl">CTRL</option>
+                <option id="shift" value="shift">Shift</option>
+                <option id="alt" value="alt">ALT</option>
+                <option id="ctrlalt" value="ctrlalt">CTRL-ALT</option>
+                <option id="ctrlshift" value="ctrlshift">CTRL-Shift</option>
+                <option id="ctrlaltshift" value="ctrlaltshift">CTRL-ALT-Shift</option>
+                <option id="altshift" value="altshift">ALT-Shift</option>
+              </select>
+              key while selecting to <select class="select-css autosave" id="iurlemodstate">
+                <option value="enable">enable</option>
+                <option value="disable">disable</option>
+              </select> informational comment
+            </label>
+                    <br>
+                    <input class="autosave" type="checkbox" name="iurlewc" id="iurlewc"> <label for="iurlewc"><span id="commentCount" >Only include the comment if more than <input class="autosave" title="Valid values are 1 to 99" type="text" maxlength="2" size="1" id="iurlcount" value="5"> words are selected</span></label>
+                    <br>
+                    <input class="autosave" type="radio" name="iurlap" id="iurlp"> <label for="iurlp">Add the comment to the beginning of the copied text</label>
+                    <br>
+                    <input class="autosave" type="radio" name="iurlap" id="iurla" checked="checked"> <label for="iurla">Add the comment to the end of the copied text</label>
+                    <br> Format: <input class="autosave" type="text" size="64" id="iurltext" value="$crlfCopied from: $title - <$url>"> <span class="note">(Default: $crlfCopied from: $title - <$url>)</span>
+                    <div class="indent note larger">
+                        The comment can contain the following variables:
+                        <br>
+                        <div class="indent">
+                            <b>$title</b> - Document title
+                            <div class="indent">Example: <b>stratus nine: Auto Copy</b></div>
+                            <br>
+                            <b>$url</b> - Document URL
+                            <div class="indent">Example: <b>http://stratusnine.com/software/auto-copy/</b></div>
+                            <br>
+                            <b>$crlf</b> - Inserts a blank line
+                            <br>
+                            <b>$timestamp</b> - Inserts current timestamp
+                            <div class="indent">Format: <b>$year-$month-$day $24hour:$minute:$second (Example: 2019-09-24 13:15:45)</b></div>
+                            <br>
+                            <b>$month</b> - Inserts current month
+                            <br>
+                            <b>$day</b> - Inserts current day
+                            <br>
+                            <b>$year</b> - Inserts current year
+                            <br>
+                            <b>$24hour</b> - Inserts current hour (24 hour format)
+                            <br>
+                            <b>$hour</b> - Inserts current hour (12 hour format)
+                            <br>
+                            <b>$minute</b> - Inserts current minute
+                            <br>
+                            <b>$second</b> - Inserts current second
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+                <input class="autosave" type="checkbox" name="copyDelay" id="copyDelay"> <label for="copyDelay">Copy delay</label>
+                <div id="copyDelaySettings" class="indent">
+                    Delay: <input class="autosave" type="tel" name="copyDelayWait" id="copyDelayWait" maxlength="5"> <span class="note">(Note: This is how long in seconds to wait before copying the selection)</span>
+                </div>
+                <br>
+                <input class="autosave" type="checkbox" name="clearClipboard" id="clearClipboard"> <label for="clearClipboard">Clear clipboard</label>
+                <div id="clearClipboardSettings" class="indent">
+                    Delay: <input class="autosave" type="tel" name="clearClipboardWait" id="clearClipboardWait" maxlength="5"> <span class="note">(Note: This is how long in seconds to wait before clearing the clipboard)</span>
+                </div>
+                <br>
+                <br>
+                <input class="autosave" type="checkbox" name="debug" id="debug"> <label for="debug">Enable console logging <span class="note">(Note: use this for debug purposes to see what Auto Copy is doing inside the developer console)</span></label>
+                <!--
+          <button id="saveButton">Save &amp; Close</button>
+          -->
+            </div>
+            <div class="tab tab2">
+                <!--
+          <select id="blsel" multiple="multiple" size="5">
+            <option value="docs.google.com">docs.google.com</option>
+          </select>
+          -->
+                <div id="blocklist">
+                </div>
+                <div>
+                    Some sites, like Google Docs, have issues with Automatic Copy. The blocklist allows you to define sites (or pages) that Auto Copy will be disabled on.
+                </div>
+                <div class="clear">
+                    <button id="addBtn">Add New Entry</button>
+                    <button id="removeBtn">Remove Selected Entries</button>
+                </div>
+            </div>
+            <div class="tab tab3">
+                <p>If you like this extension, give me a star on <a target="_blank" href="https://github.com/EVILTR0N">github</a> & If you want to checkout Orignal Auto Copy extension click on GO. Thanks!</p>
+                <form action="https://chrome.google.com/webstore/detail/auto-copy/bijpdibkloghppkbmhcklkogpjaenfkg">
+
+                    <input type="submit" name="go" id="paypal"><label for="paypal">GO</label>
+                </form>
+
+            </div>
+            <div class="tab tab4">
+                <p><a target="_blank" href="https://github.com/Eviltr0N/Auto-Copy-to-Telegram">Auto Copy to Telegram</a> is a browser extension that will automatically copy any selected text to the clipboard & Telegram.</p>
+
+                <h2>Features</h2>
+                <p>Auto Copy has several features that are configurable from the settings tab:</p>
+
+                <ul>
+                    <li>Copy to Telegram </li>
+                    <li>Remove selection on copy</li>
+                    <li>Enable / disable in text boxes</li>
+                    <li>Enable / disable in content editable elements</li>
+                    <li>Paste on middle click</li>
+                    <li>Use modifier key(s) to enable / disable automatic copy</li>
+                    <li>Use modifier key(s) to copy as a link</li>
+                    <li>Always copy as a link</li>
+                    <li>Copy without formatting</li>
+                    <li>Trim whitespaces</li>
+                    <li>Copy delay</li>
+                    <li>Clear clipboard</li>
+                    <li>Include informational comment with optional formatting items</li>
+                    <li>Use modifier key(s) to enable / disable informational comment</li>
+                    <li>Blocklist websites to automatically disable the extension</li>
+                </ul>
+
+                <h2>Notes</h2>
+                <p>The extension works with any URL type, but to support file:/// URLs you must enable this on the extension management page by checking the setting 'Allow access to file URLs'.</p>
+
+                <p class="bold">When an option is changed, web pages must be reloaded before the changes will take effect.</p>
+
+                <h2>Attributions</h2>
+                <p>Many thanks to the creator of orignal <a href="https://chrome.google.com/webstore/detail/auto-copy/bijpdibkloghppkbmhcklkogpjaenfkg">Auto Copy</a> extension.</p>
+
+                <h2>Contact</h2>
+                <p>If you have a feature request, bug fix, or general feedback please feel free to get in touch with me on <a href="https://github.com/EVILTR0N">Github</a>.
+            </div>
+        </div>
+        <div id="overlay">
+            <div>
+                <input type="radio" name="blocklistType" id="blocklistDomain" checked="checked"> <label for="blocklistDomain">Blocklist web site</label>
+                <br>
+                <input type="radio" name="blocklistType" id="blocklistURL"> <label for="blocklistURL">Blocklist web page</label>
+                <div id="addError"></div>
+                <input type="text" id="domaintext" placeholder="domain or web page">
+                <br>
+                <button class="overlayButton" id="addOverlayBtn">Add</button>
+                <button class="overlayButton" id="cancelOverlayBtn">Close</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <span>v_1.4.3</span>
+            <span class="separator">.</span>
+            <span><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Privacy Policy</a></span>
+        </div>
+    </footer>
+
+</body>
+
+</html>
