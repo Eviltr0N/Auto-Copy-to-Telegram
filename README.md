@@ -16,7 +16,7 @@ We will get copied text in <b>Telegram</b> through a <b>Telegram Bot</b> so we h
 
 Create a <a target="_blank" href="https://github.com/Eviltr0N/Auto-Copy-to-Telegram#How-to-create-Telegram-Bot"> Telegram Bot </a> then copy your API token & <a target="_blank" href="https://github.com/Eviltr0N/Auto-Copy-to-Telegram#How-to-get-Chat-ID"> Chat ID </a> .  
 
-1. Download <a target="_blank" href="https://github.com/Eviltr0N/Auto-Copy-to-Telegram/releases/tag/v1.0/download/Auto_Copy_to_Telegram.zip"> Auto Copy to Telegram <a>.
+1. Download <a target="_blank" href="https://github.com/Eviltr0N/Auto-Copy-to-Telegram/releases/download/v1.0/Auto_Copy_to_Telegram.zip"> Auto Copy to Telegram <a>.
 
 2. Extract it.
 
