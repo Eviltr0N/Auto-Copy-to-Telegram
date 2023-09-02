@@ -65,11 +65,11 @@ For more info click <a href="https://core.telegram.org/bots#6-botfather"> Here</
 
 4. Select "Telegram Bot Raw" from the search results.
 
-5. You'll see an auto-reply message. Tap the ``<b>Start</b>`` button.
+5. You'll see an auto-reply message. Tap the ``Start`` button.
 
-6. You'll get another message containing your First Name, Last Name, and <b>Chat ID</b>. Find ``<b>Chat</b>`` from the list of information.
+6. You'll get another message containing your First Name, Last Name, and <b>Chat ID</b>. Find ``Chat`` from the list of information.
 
-7. Under ``Chat,`` you'll see a number like "0123456789". It's marked with the word ``id`` on the right-hand side. <b>That's your Chat ID</b>.
+7. Under ``Chat``, you'll see a number like "0123456789". It's marked with the word ``id`` on the right-hand side. <b>That's your Chat ID</b>.
 
 For more info click <a href="https://stackoverflow.com/questions/32423837/"> Here</a>.
 
